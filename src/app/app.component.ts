@@ -52,6 +52,7 @@ export class AppComponent {
       if (line.includes('Barrels')) {
         this.oil += amount;
         type = 'Oil';
+        //hmm
       }
       if (!type) {
         type = 'Not oil or bushels :P';
