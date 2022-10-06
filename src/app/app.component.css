@@ -1,0 +1,12 @@
+p {
+  font-family: Lato;
+}
+
+.input-field label {
+  font-size: 1.5em;
+}
+.input-field input {
+  width: 100%;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}

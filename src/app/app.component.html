@@ -1,0 +1,73 @@
+<h1>Sales calc</h1>
+<p>{{ datetime }}</p>
+<p>{{ timeLocal }}</p>
+<p>{{ isoTime }}</p>
+<p>
+  <textarea (keyup)="parse($event)" cols="50" rows="5"></textarea>
+</p>
+
+<!-- <ul>
+  <li *ngFor="let t of final">{{ t.total | number: '1.0-0' }} {{ t.type }}</li>
+</ul> -->
+<p>Sum (if everything sells): {{ sum | number: '1.0-0' }}</p>
+
+<p>Oil total: {{ oil | number: '1.0-0' }}</p>
+<p>Bushels total: {{ bushels | number: '1.0-0' }}</p>
+<div class="input-field">
+  <input
+    type="number"
+    name="daysLeft"
+    id="daysLeft"
+    (keyup)="daysLeft($event)"
+    placeholder="Days left"
+  />
+</div>
+<div class="input-field">
+  <input
+    type="number"
+    name="turnsOnHand"
+    id="turnsOnHand"
+    (keyup)="turnHand($event)"
+    placeholder="Turns on hand"
+  />
+</div>
+<div class="input-field">
+  <input
+    type="number"
+    name="foodProd"
+    (keyup)="foodProd($event)"
+    placeholder="Food production"
+  />
+</div>
+<div class="input-field">
+  <input
+    type="number"
+    name="oilProd"
+    (keyup)="oilProd($event)"
+    placeholder="Oil production"
+  />
+</div>
+<div class="input-field">
+  <input
+    type="number"
+    name="foodOnHand"
+    (keyup)="foodHand($event)"
+    placeholder="Food on hand"
+  />
+</div>
+<div class="input-field">
+  <input
+    type="number"
+    name="oilOnHand"
+    (keyup)="oilHand($event)"
+    placeholder="Oil on hand"
+  />
+</div>
+<div class="input-field"></div>
+
+<p>Turns left: {{ turnsLeft }}</p>
+<p>Food to be produced: {{ foodToProduce | number: '1.0-0' }}</p>
+<p>Oil to be produced: {{ oilToProduce | number: '1.0-0' }}</p>
+<hr />
+<p>Total food: {{ totalFood | number: '1.0-0' }}</p>
+<p>Total oil: {{ totalOil | number: '1.0-0' }}</p>
